@@ -1,0 +1,26 @@
+.step-card {
+  background-color: #f8f8f8;
+  border-radius: 22px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 2px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+  position: relative;
+  p {
+    padding: 1.5em 2em;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  i {
+    margin-right: 1.5em;
+  }
+
+  span {
+    position: absolute;
+    background-color: #9356DC;
+    padding: 5px 10px;
+    border-radius: 50%;
+    color: white;
+    left: -15px;
+    font-size: 16px;
+    bottom: 24px;
+  }
+}

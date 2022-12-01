@@ -1,2 +1,13 @@
 @import 'variable.scss';
+@import 'components/cta.scss';
+@import 'components/step-card.scss';
 @import 'layouts/default.scss';
+@import 'layouts/home.scss';
+@import 'components/navbar.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+// font-family: 'Shrikhand', cursive;
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
