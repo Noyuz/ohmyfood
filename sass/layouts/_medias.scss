@@ -1,0 +1,59 @@
+@media (min-width: 768px) {
+  .container {
+    margin: 0 10%;
+  }
+
+  body > img {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  body > img {
+    height: 350px;
+  }
+
+  h2 {
+    margin: 0 0 1em 0;
+  }
+
+  #fonctionnement {
+    padding: 2em 0;
+
+    .step-cards {
+      display: flex;
+      justify-content: space-between;
+      .step-card p {
+        margin-bottom: 0;
+        padding: 1em;
+      }
+      i {
+        margin-right: 0.5em;
+      }
+      span {
+        bottom: 14px;
+      }
+    }
+
+  }
+
+  .restaurants-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    .restaurant-card {
+      margin-bottom: 0;
+    }
+  }
+
+  .carte h1 {
+    font-size: 42px;
+  }
+}

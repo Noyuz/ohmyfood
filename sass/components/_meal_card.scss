@@ -1,0 +1,31 @@
+.meal-card {
+  background-color: white;
+  padding: 0.75em 1em 0.75em 0.75em;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  margin-bottom: 1em;
+  &__bar {
+    transform: scale(0);
+    background-color: $lightGreen;
+    transform-origin: right;
+    height: 100%;
+  }
+  &:hover {
+    .meal-card__bar {
+      transform: scale(0.4);
+      transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+    }
+  }
+
+  div {
+    padding-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    p:first-child {
+      font-weight: 300;
+    }
+    p:last-child {
+      font-weight:bold;
+    }
+  }
+}

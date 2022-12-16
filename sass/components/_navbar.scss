@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  height: 80px;
+  box-shadow: 0 0 15px -15px rgba(0, 0, 0, 0.2);
+
+  img {
+    margin: auto;
+    width: 220px;
+  }
+}
+
+#menu-navbar {
+  align-items: center;
+  height: 60px;
+  position: relative;
+
+  img {
+    width: 160px;
+  }
+
+  a {
+    margin-left: 1.5em;
+    position: absolute;
+    font-size: 22px;
+  }
+}

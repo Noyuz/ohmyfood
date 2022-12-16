@@ -1,0 +1,47 @@
+
+.carte {
+  padding: 2em 0;
+  background-color:#f8f8f8;
+  border-radius: 32px 32px 0 0;
+  margin-top: -2em;
+  position: relative;
+
+  h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 28px;
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0 0 1.25em 0;
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    opacity: 0.7;
+    &:before {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: $lightGreen;
+      position: absolute;
+      bottom: -8px;
+    }
+  }
+
+  i {
+    font-size: 22px;
+    padding-left: 2em;
+  }
+
+  .meal-list {
+    margin: 2.5em 0;
+  }
+
+  .cta-container {
+    text-align: center;
+    input {
+      width: 11em;
+      @include cta
+    }
+  }
+}

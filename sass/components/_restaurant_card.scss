@@ -1,0 +1,47 @@
+.restaurant-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 1em;
+
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: 175px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+  }
+
+  .fa-heart {
+    font-size: 26px;
+    padding-top: 10px;
+  }
+
+  button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: $lightGreen;
+    color: #1b8a6f;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 2px;
+    padding: 6px 10px;
+  }
+
+  h3 {
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
