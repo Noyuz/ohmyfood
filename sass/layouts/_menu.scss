@@ -39,9 +39,8 @@
 
   .cta-container {
     text-align: center;
-    input {
+    .cta {
       width: 11em;
-      @include cta
     }
   }
 }
