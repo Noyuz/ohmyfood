@@ -1,31 +1,119 @@
-.meal-card {
-  background-color: white;
-  padding: 0.75em 1em 0.75em 0.75em;
-  border-radius: 16px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  margin-bottom: 1em;
-  &__bar {
-    transform: scale(0);
-    background-color: $lightGreen;
-    transform-origin: right;
-    height: 100%;
+
+.delay-1{
+
+}
+$delay: 0s;
+.meal-list {
+  @for $i from 1 through 4 {
+    &:nth-of-type(#{$i}) {
+      .meal-card {
+        animation: appear 1s forwards;
+        opacity: 0;
+
+        @for $k from 1 through 5 {
+          &:nth-of-type(#{$k}) {
+              animation-delay: ($delay + $i)/ 3;
+          }
+          $delay: $delay + 0.3s;
+        }
+      }
+    }
   }
-  &:hover {
-    .meal-card__bar {
-      transform: scale(0.4);
-      transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+}
+
+
+.meal-card {
+  // animation: appear 1s forwards;
+  // opacity: 0;
+  // @for $i from 1 through 10 {
+  //   &:nth-of-type(#{$i}) {
+  //     animation-delay: $delay * $i;
+  //   }
+  // }
+
+  padding: 0.75em;
+  border-radius: 16px;
+  box-shadow: rgba(5, 4, 4, 0.1) 0px 4px 12px;
+  margin-bottom: 1em;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+  }
+
+  &__description {
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+
+  &__fill {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    background-color: $lightGreen;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+
+    .checkmark {
+      background-color: white;
+      border-radius: 50%;
+      margin: auto;
+
+      i {
+        color: $lightGreen;
+        padding: 0.5em;
+        transition: transform 0.5s ease-in-out;
+      }
     }
   }
 
-  div {
-    padding-top: 0.5em;
-    display: flex;
-    justify-content: space-between;
-    p:first-child {
-      font-weight: 300;
+  &:hover {
+    .meal-card__fill {
+      transform: translateX(0%);
     }
-    p:last-child {
-      font-weight:bold;
+
+    .meal-card__fill .checkmark i {
+      animation: rotate 0.5s 0.2s ease-in-out;
     }
+
+    .meal-card__infos {
+      width: 80%;
+      overflow: hidden;
+    }
+  }
+}
+
+@keyframes appear {
+  // définit les étapes de l'animation
+  from {
+    opacity: 0; // rend l'élément invisible au départ
+  }
+
+  to {
+    opacity: 1; // rend l'élément visible à la fin
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

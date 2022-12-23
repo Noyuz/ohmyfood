@@ -1,3 +1,20 @@
+$fill-duration: 0.5s;
+
+.carte-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    position: relative;
+    width: 10%;
+    height: 30px;
+    i {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
 
 .carte {
   padding: 2em 0;
@@ -28,9 +45,18 @@
     }
   }
 
-  i {
-    font-size: 22px;
-    padding-left: 2em;
+  .full {
+    color: #ff0000;
+    opacity: 0;
+  }
+
+  .fa-heart {
+    font-size: 24px;
+    transition: opacity $fill-duration ease-in-out;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
 
   .meal-list {
