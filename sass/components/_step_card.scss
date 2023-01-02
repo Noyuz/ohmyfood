@@ -3,6 +3,8 @@
   border-radius: 22px;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 2px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
   position: relative;
+  @include hover-purple;
+
   p {
     padding: 1.5em 2em;
     font-size: 18px;
@@ -11,6 +13,7 @@
   }
 
   i {
+    @include hover-purple;
     margin-right: 1.5em;
   }
 
@@ -23,5 +26,12 @@
     left: -15px;
     font-size: 16px;
     bottom: 24px;
+  }
+  &:hover {
+    background-color: rgba(147, 86, 220, 0.1);
+    cursor: pointer;
+    i {
+      color: $purple;
+    }
   }
 }

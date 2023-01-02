@@ -1,0 +1,30 @@
+$fill-duration: 0.5s;
+
+.heartbox {
+  position: relative;
+  width: 10%;
+  height: 30px;
+
+  i {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.fa-heart {
+  font-size: 30px;
+  transition: opacity $fill-duration ease-in-out;
+
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.full {
+  opacity: 0;
+  color: transparent;
+  background: linear-gradient(to right top, $pink, $purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+}

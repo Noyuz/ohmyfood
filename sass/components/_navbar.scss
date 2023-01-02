@@ -11,11 +11,10 @@ header {
 
 #menu-navbar {
   align-items: center;
-  height: 60px;
   position: relative;
 
-  img {
-    width: 160px;
+  .fa-arrow-left {
+    font-size: 28px;
   }
 
   a {

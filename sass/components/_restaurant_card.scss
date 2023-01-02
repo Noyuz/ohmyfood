@@ -8,6 +8,7 @@
   &__infos {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
   }
 
@@ -16,11 +17,6 @@
     height: 175px;
     border-radius: 16px 16px 0 0;
     object-fit: cover;
-  }
-
-  .fa-heart {
-    font-size: 26px;
-    padding-top: 10px;
   }
 
   button {

@@ -1,8 +1,5 @@
-
-.delay-1{
-
-}
 $delay: 0s;
+
 .meal-list {
   @for $i from 1 through 4 {
     &:nth-of-type(#{$i}) {
@@ -21,16 +18,7 @@ $delay: 0s;
   }
 }
 
-
 .meal-card {
-  // animation: appear 1s forwards;
-  // opacity: 0;
-  // @for $i from 1 through 10 {
-  //   &:nth-of-type(#{$i}) {
-  //     animation-delay: $delay * $i;
-  //   }
-  // }
-
   padding: 0.75em;
   border-radius: 16px;
   box-shadow: rgba(5, 4, 4, 0.1) 0px 4px 12px;
@@ -98,13 +86,12 @@ $delay: 0s;
 }
 
 @keyframes appear {
-  // définit les étapes de l'animation
   from {
-    opacity: 0; // rend l'élément invisible au départ
+    opacity: 0;
   }
 
   to {
-    opacity: 1; // rend l'élément visible à la fin
+    opacity: 1;
   }
 }
 
