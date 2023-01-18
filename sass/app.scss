@@ -1,18 +1,24 @@
+// Importing fonts
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
-// font-family: 'Shrikhand', cursive;
 
-@import 'variable.scss';
+// Importing scss utils
+@import 'utils/variables.scss';
+@import 'utils/keyframes';
 @import 'utils/normalize.scss';
 @import 'utils/mixins.scss';
-@import 'components/heart.scss';
-@import 'components/spinner.scss';
-@import 'components/cta.scss';
-@import 'components/step_card.scss';
-@import 'components/restaurant_card.scss';
-@import 'components/meal_card.scss';
-@import 'components/navbar.scss';
-@import 'components/footer.scss';
-@import 'layouts/menu.scss';
+
+// Importing scss layouts
 @import 'layouts/default.scss';
-@import 'layouts/home.scss';
+@import 'layouts/header.scss';
+@import 'layouts/footer.scss';
 @import 'layouts/medias.scss';
+
+// Importing scss pages
+@import 'pages/home.scss';
+@import 'pages/menu.scss';
+
+// Importing scss components
+@import 'components/spinner.scss';
+@import 'components/cards.scss';
+@import 'components/buttons.scss';
+@import 'components/heart.scss';

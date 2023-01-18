@@ -8,6 +8,7 @@
   font-weight: bold;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   transition: background-image 300ms 100ms, transform 350ms, box-shadow 300ms 50ms;
+
   &:hover {
     background-image: linear-gradient(rgba(255, 121, 218, 0.8), rgba(147, 86, 220, 0.9));
     transform: scale(1.05);

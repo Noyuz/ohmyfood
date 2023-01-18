@@ -1,0 +1,150 @@
+.meal-card {
+  padding: 0.75em;
+  border-radius: 16px;
+  box-shadow: rgba(5, 4, 4, 0.1) 0px 4px 12px;
+  margin-bottom: 1em;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+  }
+
+  &__description {
+    font-weight: 300;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  &__price {
+    font-weight: bold;
+  }
+
+  &__fill {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    background-color: $lightGreen;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+
+    .checkmark {
+      background-color: white;
+      border-radius: 50%;
+      margin: auto;
+
+      i {
+        color: $lightGreen;
+        padding: 0.5em;
+        transition: transform 0.5s ease-in-out;
+      }
+    }
+  }
+
+  &:hover {
+    .meal-card__fill {
+      transform: translateX(0%);
+    }
+
+    .meal-card__fill .checkmark i {
+      animation: rotate 0.5s 0.2s ease-in-out;
+    }
+
+    .meal-card__infos {
+      width: 80%;
+      overflow: hidden;
+    }
+  }
+}
+
+.restaurant-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 1em;
+
+  &__infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: 175px;
+    border-radius: 16px 16px 0 0;
+    object-fit: cover;
+  }
+
+  button {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background-color: $lightGreen;
+    color: #1b8a6f;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 2px;
+    padding: 6px 10px;
+  }
+
+  h3 {
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+  }
+}
+
+.step-card {
+  background-color: #f8f8f8;
+  border-radius: 22px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 2px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+  position: relative;
+  @include hover-purple;
+
+  p {
+    padding: 1.5em 2em;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+
+  i {
+    @include hover-purple;
+    margin-right: 1.5em;
+  }
+
+  span {
+    position: absolute;
+    background-color: $purple;
+    padding: 5px 10px;
+    border-radius: 50%;
+    color: white;
+    left: -15px;
+    font-size: 16px;
+    bottom: 24px;
+  }
+
+  &:hover {
+    background-color: rgba(147, 86, 220, 0.1);
+    cursor: pointer;
+
+    i {
+      color: $purple;
+    }
+  }
+}

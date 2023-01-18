@@ -2,21 +2,13 @@
   .container {
     margin: 0 10%;
   }
-
-  body > img {
+  .banner {
     height: 300px;
-  }
-
-}
-
-@media (min-width: 1200px) {
-  .container {
-    margin: 0 20%;
   }
 }
 
 @media (min-width: 992px) {
-  body > img {
+  .banner {
     height: 350px;
   }
 
@@ -56,5 +48,11 @@
 
   .carte h1 {
     font-size: 42px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 20%;
   }
 }
