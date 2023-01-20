@@ -57,7 +57,6 @@
           &:nth-of-type(#{$k}) {
             animation-delay: ($delay + $i)/ 3;
           }
-          // coucou
           $delay: $delay + 0.3s;
         }
       }

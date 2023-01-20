@@ -7,6 +7,12 @@
   position: relative;
   overflow: hidden;
 
+  &__title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   &__infos {
     display: flex;
     justify-content: space-between;
@@ -58,9 +64,8 @@
       animation: rotate 0.5s 0.2s ease-in-out;
     }
 
-    .meal-card__infos {
+    .meal-card__infos, .meal-card__title {
       width: 80%;
-      overflow: hidden;
     }
   }
 }
